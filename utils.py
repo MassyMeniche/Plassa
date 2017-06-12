@@ -1,5 +1,9 @@
 import json
 from math import radians, cos, sin, asin, sqrt
+import re
+import string
+import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 def read_file(path):
 	with open(path,'r') as json_data:
@@ -87,7 +91,7 @@ def cosine_similarity(vector1, vector2):
         return 0.0
     return top/bottom
 
-
+stpwds=['restaurant','la','le','alger','café','patisserie','pizzeria','de','les','des','','pizza','el','l','traiteur','et']
 
 
 
